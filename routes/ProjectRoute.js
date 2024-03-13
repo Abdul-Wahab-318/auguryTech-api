@@ -9,14 +9,14 @@ const {
 
 let router = express.Router();
 
-router.route('/projects').post(createProject);
+router.route('/').post(createProject);
 
-router.route('/projects').get(getAllProjects);
+router.route('/').get(getAllProjects);
 
-router.route('/projects/:id').get(getProjectById);
+router.route('/:id').get(getProjectById);
 
-router.route('/projects/:id').put(updateProject);
+router.route('/:id').put(updateProject);
 
-router.route('/projects/:id').delete(deleteProject);
+router.route('/:id').delete(deleteProject);
 
 module.exports = router;

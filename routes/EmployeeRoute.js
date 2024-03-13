@@ -9,14 +9,14 @@ const {
 
 let router = express.Router();
 
-router.route("/employees").post(createEmployee);
+router.route("/").post(createEmployee);
 
-router.route("/employees").get(getAllEmployees);
+router.route("/").get(getAllEmployees);
 
-router.route("/employees/:id").get(getEmployeeById);
+router.route("/:id").get(getEmployeeById);
 
-router.route("/employees/:id").put(updateEmployee);
+router.route("/:id").put(updateEmployee);
 
-router.route("/employees/:id").delete(deleteEmployee);
+router.route("/:id").delete(deleteEmployee);
 
 module.exports = router;
